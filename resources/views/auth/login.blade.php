@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.ap')
 
 @section('content')
     <br><br>
@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <br>
-                <center><img src="/imagens/login.png" class="img-fluid" alt="Responsive image" width="150" height="75"></center>
+                <center><img src="/imagens/login.png" class="img-fluid" alt="Responsive image" width="100" height="100"></center>
                 <br>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf

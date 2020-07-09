@@ -14,12 +14,20 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{$quarto->tipoqs->tipoQuarto}}</h5>
-                            <p class="card-text">Referência: {{$quarto->referencia}}</p>
+                            <div class="row">
+                                <div class="col-sm-9">
+                                  <h5 class="card-title">{{$quarto->tipoqs->tipoQuarto}}</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                  <p class="card-text">{{$quarto->disponibilidade->disponibilidade}}</p>
+                                </div>
+                              </div>
                             <p class="card-text">{{$quarto->descricao->descricao}}</p>
                             <p class="card-text">Localização: {{$quarto->localizacao->localizacao}}</p>
                             <p class="card-text">Preço: {{$quarto->preco}}€</p>
-                            <a href="/home/reservar/{{$quarto->id}}"><button class="btn btn-info">Reservar</button></a>
+                            @if ($quarto->disponibilidade->disponibilidade == 'disponivel')
+                                <a href="/home/reservar/{{$quarto->id}}" class="btn btn-primary">Reservar</a>    
+                            @endif
                         </div>
                     </div>
                 </div>

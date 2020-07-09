@@ -20,7 +20,8 @@
               {{auth()->User()->name}}
               <small style="font-size: 1vw">NapBox Sleep&Go © 2020 NapBox, Inc.</small>
               <br>
-              <a href="#" class="btn btn-danger btn-flat" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Sair</a>
+              <a href="/home" class="btn btn-info">Privada</a>
+              <a href="#" class="btn btn-dark btn-flat" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Sair</a>
               <form id="logout-form"action="{{route('logout')}}" method="POST" style="display:nome;">
               @csrf
               </form>

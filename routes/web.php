@@ -34,7 +34,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('home/reservar/{id}','HomeController@reservar');
     //Route::get('/reservar','HomeController@reservar');
     //Route::get('/ver','HomeController@show');
-    Route::get('/semacesso', 'Democontroller@semAcesso');
+    Route::get('/semacesso', 'DemoController@semAcesso');
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('admin', 'AdminController');
         Route::delete('/reservas/{id}', 'AdminController@apagar');
